@@ -12,9 +12,9 @@ type Props = {
 export async function generateStaticParams() {
   const slugs = getPostsSlug();
 
-  return slugs.map((slug) => {
-    slug;
-  });
+  return slugs.map((slug) => ({
+    slug,
+  }));
 }
 
 export default function Post({ params }: Props) {
