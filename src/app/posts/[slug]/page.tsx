@@ -1,6 +1,8 @@
 import Markdown from "@/components/markdown";
 import { getPostBySlug, getPostsSlug, Post } from "@/lib/managePosts";
 
+export const dynamicParams = false;
+
 type Props = {
   params: {
     slug: string;
