@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400&family=Roboto&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css");
 
 * {
   box-sizing: border-box;
@@ -8,6 +9,61 @@
 
 html,
 body {
+  font-family: "Lato", sans-serif;
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+h1,
+h2 {
+  padding-bottom: 1em;
+}
+
+hr {
+  margin-bottom: 1em;
+}
+
+ul,
+ol {
+  padding-bottom: 1em;
+  margin-left: 1em;
+}
+
+p {
+  padding-bottom: 1em;
+}
+
+main {
+  margin-inline: auto;
+  max-width: 500px;
+}
+
+li {
+  padding-inline: 1em;
+}
+
+code {
+  margin-bottom: 1em;
+}
+
+blockquote {
+  padding: 1em;
+  background-color: beige;
+  color: saddlebrown;
+  position: relative;
+  margin-bottom: 1em;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0.5em;
+    content: "";
+    background: saddlebrown;
+    width: 0.5em;
+    height: 100%;
+  }
+
+  & > * {
+    margin-left: 0.5em;
+  }
 }

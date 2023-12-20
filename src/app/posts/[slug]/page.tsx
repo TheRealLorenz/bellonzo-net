@@ -21,8 +21,8 @@ export default function Post({ params }: Props) {
   const post = getPostBySlug(params.slug);
 
   return (
-    <>
+    <main>
       <Markdown content={post.content} />
-    </>
+    </main>
   );
 }
