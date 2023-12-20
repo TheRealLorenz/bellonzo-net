@@ -1,6 +1,7 @@
 ---
 author: Lorenzo Bellina
 date: 2023-12-19
+title: Lorem Ipsum
 ---
 # Lorem Ipsum
 

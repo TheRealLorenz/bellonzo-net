@@ -7,6 +7,7 @@ const postsDir = path.join(process.cwd(), "_posts");
 type PostData = {
   author: string;
   date: string;
+  title: string;
 };
 
 export type Post = {
@@ -18,7 +19,7 @@ function assertsValid(
   data: { [key: string]: any },
   slug: string,
 ): asserts data is PostData {
-  const fields: (keyof PostData)[] = ["author", "date"] as const;
+  const fields: (keyof PostData)[] = ["author", "date", "title"] as const;
 
   fields.forEach((field) => {
     if (!data[field]) {
