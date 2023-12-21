@@ -73,19 +73,17 @@ code {
 }
 
 blockquote {
-  padding-inline: 2rem 1rem;
-  background-color: beige;
-  color: saddlebrown;
+  padding-inline: 2rem;
+  color: darkgrey;
   position: relative;
   margin-block: 2rem;
-  overflow: auto;
 
   &:before {
     position: absolute;
     top: 0;
-    left: 0.5rem;
+    left: 0;
     content: "";
-    background: saddlebrown;
+    background: darkgrey;
     width: 0.5rem;
     height: 100%;
   }
