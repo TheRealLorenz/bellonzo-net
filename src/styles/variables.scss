@@ -1,15 +1,4 @@
-/*
-:root {
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
-}
-*/
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
+$white: #fffff2;
+$black: #181816;
+$lightGray: #d3d3d3;
+$darkGray: #545454;

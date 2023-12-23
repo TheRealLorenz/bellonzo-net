@@ -1,5 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400&family=Roboto&display=swap");
-@import url("https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css");
+@import "variables";
+@import "mixins";
+@import "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400&family=Roboto&display=swap";
+@import "https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css";
+
+$darkMode: true;
 
 * {
   box-sizing: border-box;
@@ -14,6 +18,14 @@ body {
   overflow-x: hidden;
   margin-inline: 1rem;
   line-height: 1.6rem;
+  background: $white;
+  color: $black;
+
+  @include darkMode {
+    color-scheme: dark;
+    background: $black;
+    color: $white;
+  }
 }
 
 h1 {
@@ -22,11 +34,15 @@ h1 {
 
   &:before {
     content: "";
-    background: white;
+    background: black;
     position: absolute;
     width: 100%;
-    height: 2px;
-    bottom: -0.5rem;
+    height: 5px;
+    bottom: -1rem;
+
+    @include darkMode {
+      background: white;
+    }
   }
 }
 
@@ -39,8 +55,14 @@ h3 {
 hr {
   margin-block: 2rem;
   height: 2px;
+  width: 80%;
+  margin-inline: auto;
   border: none;
   background: black;
+
+  @include darkMode {
+    background: white;
+  }
 }
 
 ul,
@@ -74,18 +96,26 @@ code {
 
 blockquote {
   padding-inline: 2rem;
-  color: darkgrey;
+  color: $darkGray;
   position: relative;
   margin-block: 2rem;
+
+  @include darkMode {
+    color: $lightGray;
+  }
 
   &:before {
     position: absolute;
     top: 0;
     left: 0;
     content: "";
-    background: darkgrey;
-    width: 0.5rem;
+    background: $lightGray;
+    width: 5px;
     height: 100%;
+
+    @include darkMode {
+      background: $darkGray;
+    }
   }
 
   & > p {
