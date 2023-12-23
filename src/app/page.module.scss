@@ -1,0 +1,46 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+$darkMode: true;
+
+.card {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  display: flex;
+  direction: columns;
+  align-items: flex-end;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 200ms ease-out;
+
+  & > .card-bottom {
+    background-color: $lightGray;
+    flex: 1 1;
+    padding: 1rem;
+
+    @include darkMode {
+      background-color: $darkGray;
+    }
+
+    & > p {
+      margin: 0;
+    }
+
+    & > .title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    & > .author {
+      font-style: italic;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.showcase {
+}

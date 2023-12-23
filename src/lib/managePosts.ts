@@ -8,6 +8,7 @@ type PostData = {
   author: string;
   date: string;
   title: string;
+  slug: string;
 };
 
 export type Post = {
@@ -26,6 +27,8 @@ function assertsValid(
       throw `missing field '${field}' in '${slug}.md'`;
     }
   });
+
+  data.slug = slug;
 }
 
 export const getPostBySlug = (slug: string): Post => {
